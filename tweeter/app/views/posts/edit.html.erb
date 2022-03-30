@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <!--Header-->
+        <header id="header" class="skel-layers-fixed">
+            <h1><a href="#">Twitter</a></h1>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#">Acceuil</a></li>
+                    <li><a href="#">A Propos</a></li>
+                    <li><a href="#">Contactez-Nous</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#" class="button special">Sign Up</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Banner -->
+        <section id="banner">
+            <div class="inner">
+                <h2>This is Tweeter</h2>
+                <p>Tweeter Application Web</p>
+                <ul class="actions">
+                <%= form_with model: @post, local:true do |form| %>
+                    <% if @post.errors.any? %>
+                      <h3 style="color:red;"> Une erreur est survenue </h3>
+                      <ul>
+                      <% @post.errors.full_messages.each do |msg| %>
+                          <li style="color:red;"> <%= msg %> </li>
+                       <% end %>
+                       <br/><br/>
+                      </ul>
+                    <% end %>
+                    <li>
+                      <%= form.label :content %>
+                      <%= form.text_area :content %>
+                    </li><br/><br/>
+                    <li>
+                      <%= form.submit "Modifier le post"%>
+                    </li>
+                   <% end %>
+                    
+                </ul>
+            </div>
+        </section>
+
+
+        <!-- Footer -->
+        <footer id="footer">
+            <div class="container">
+                <ul class="copyright">
+                    <li>&copy; Chabla. All rights reserved.</li>
+                    <li>Design: <a href="http://templated.co">ChablaDESIGN</a></li>
+                    <li>Images: <a href="http://unsplash.com">ChablaIMAGE</a></li>
+                </ul>
+            </div>
+        </footer>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <!--Header-->
+        <header id="header" class="skel-layers-fixed">
+            <h1><a href="#">Twitter</a></h1>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#">Acceuil</a></li>
+                    <li><a href="#">A Propos</a></li>
+                    <li><a href="#">Contactez-Nous</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#" class="button special">Sign Up</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Banner -->
+        <section id="banner">
+            <div class="inner">
+                <div style="border: 1px black solid; box-shadow: 6px 6px 6px blue;"> <%= @post.content %></div>
+                <br/>
+                <div> <%= link_to "retournez aux tweets", posts_path() %></div>
+                <hr/>
+            </div>
+        </section>
+
+
+        <!-- Footer -->
+        <footer id="footer">
+            <div class="container">
+                <ul class="copyright">
+                    <li>&copy; Chabla. All rights reserved.</li>
+                    <li>Design: <a href="http://templated.co">ChablaDESIGN</a></li>
+                    <li>Images: <a href="http://unsplash.com">ChablaIMAGE</a></li>
+                </ul>
+            </div>
+        </footer>
+
+    </div>
+</body>
+
+</html>

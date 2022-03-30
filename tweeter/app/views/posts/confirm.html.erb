@@ -1,0 +1,7 @@
+<h3>Confirmez votre tweet</h3>
+<%= form_with(model: @post, local: true) do |form| %>
+  <%= form.hidden_field :content %>
+  <p><%= @post.content %></p>
+  <%= form.submit  "Confirmez" %>
+<% end %>
+<%= link_to 'Retour', :back %>
